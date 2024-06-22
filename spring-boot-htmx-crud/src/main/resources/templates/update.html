@@ -1,0 +1,72 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form
+                            th:hx-put="'/update/' + ${todo.id}"
+                            method="put"
+                            hx-target="#target">
+                        <h2 class="">Update Todo</h2>
+                        <!-- First Name -->
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label"> First Name
+                            </label>
+                            <input
+                                    class="form-control"
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    th:value="${todo.firstName}"
+                                    required/>
+                        </div>
+                        <!-- Last Name -->
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label"> Last Name
+                            </label>
+                            <input
+                                    class="form-control"
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    th:value="${todo.lastName}"
+                                    required/>
+                        </div>
+                        <!-- Email -->
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label"> Email
+                            </label>
+                            <input
+                                    class="form-control"
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    th:value="${todo.email}"
+                                    required/>
+                        </div>
+                        <!-- Planet -->
+                        <div class="form-group col-md-6">
+                            <label class="col-form-label"> Planet
+                            </label>
+                            <input
+                                    class="form-control"
+                                    type="text"
+                                    id="planet"
+                                    name="planet"
+                                    th:value="${todo.planet}"
+                                    required/>
+                        </div>
+                        <br>
+                        <!-- submit -->
+                        <div class="form-group col-md-6">
+                            <div class="text-center">
+                                <input type="submit" class="btn btn-success"
+                                       value=" Submit ">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
